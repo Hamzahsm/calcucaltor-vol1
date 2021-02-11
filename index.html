@@ -14,7 +14,9 @@
         <input type="txt" name="txt" class="value" readonly="">
         <!-- your screen on calculator end here -->
 
-        <!-- all of our number and button start here -->
+        <!-- all of our number and button start here --> 
+
+        <!-- notice that we didn't use "+=" again in the clear class. because we want to delet everthing inside it when the user clicked -->
         <span class="num clear" onclick="document.calc.txt.value =''">C</span>
         <span class="num" onclick="document.calc.txt.value +='/'">/</span>
         <span class="num" onclick="document.calc.txt.value +='*'">*</span>
@@ -25,6 +27,8 @@
         <span class="num" onclick="document.calc.txt.value +='4'">4</span>
         <span class="num" onclick="document.calc.txt.value +='5'">5</span>
         <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+
+        <!-- plus class is using for design -->
         <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
         <span class="num" onclick="document.calc.txt.value +='3'">3</span>
         <span class="num" onclick="document.calc.txt.value +='2'">2</span>
@@ -32,6 +36,8 @@
         <span class="num" onclick="document.calc.txt.value +='0'">0</span>
         <span class="num" onclick="document.calc.txt.value +='00'">00</span>
         <span class="num" onclick="document.calc.txt.value +='.'">.</span>
+
+        <!-- notice that we usel eval(). this is will counting what the user has been clicked -->
         <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
         <!-- all of your number and button end here -->
     </form>

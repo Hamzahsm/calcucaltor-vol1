@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+/* we want to make sure that our project is display in the center of windows, so we used display : flex; and set center to everything */
 body {
     display: flex;
     justify-content: center;
@@ -12,13 +14,14 @@ body {
     background-color: skyblue;
 }
 
-
+/* since we use display : grid in the parent of our calculator, we have an acces to using this to the child */
 .calculator {
     position: relative;
     display: grid;
 }
 
 .calculator .value {
+    /* note that we use "span" before the number */
     grid-column: span 4;
     height: 100px; 
     text-align: right;
@@ -29,28 +32,33 @@ body {
 } 
 
 .calculator span {
+    /* notice, that span is always have default display : inline. so we change it in to grid. because we want have a freedom to design our project */
     display: grid;
     height: 60px;
     width: 60px;
     color: #fff;
     background: #0c2835;
+    /* this to make sure that our number or operator arithmatic right on the center */
     place-items: center;
     border: 1px solid rgba(0,0,0,.1);
     cursor: pointer;
 }
 
+/* this is to give an effec when the button is clicked */
 .calculator span:active {
     background-color: rgb(247, 54, 86);
     color: #111;
 } 
 
 .calculator span.clear {
+    /* notice that  we give two value in grid*/
     grid-column: span 2;
     width: 120px; 
     background: #ff3077;
 }
 
 .calculator span.plus {
+    /* notice that we not use grid-column again, instead we use the grid-row because want to set the row not the column*/
     grid-row: span 2;
     height: 120px;   
 }
