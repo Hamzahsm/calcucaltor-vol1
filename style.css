@@ -38,3 +38,23 @@ body {
     border: 1px solid rgba(0,0,0,.1);
     cursor: pointer;
 }
+
+.calculator span:active {
+    background-color: rgb(247, 54, 86);
+    color: #111;
+} 
+
+.calculator span.clear {
+    grid-column: span 2;
+    width: 120px; 
+    background: #ff3077;
+}
+
+.calculator span.plus {
+    grid-row: span 2;
+    height: 120px;   
+}
+
+.calculator span.equal {
+    background:rgb(6, 6, 82);
+}
